@@ -13,3 +13,22 @@ class Solution {
         return new int[]{};
     }
 }
+//// another solution 
+class Solution {
+    public int[] twoSum(int[] a, int target) {
+        int n = a.length; 
+        int str = 0;
+        int end = n-1;
+        while(str<=end){
+            if(a[str]+a[end]==target){
+                return new int []{str+1,end+1};
+            }else if( a[str]+a[end]< target){
+                str++;
+            }else{
+                end--;
+            }
+        } 
+        
+        return new int[]{-1,-1};
+    }
+}
